@@ -3,7 +3,7 @@ package com.example.netflix;
 import com.google.gson.annotations.SerializedName;
 
 public class Results {
-    @SerializedName("name")
+    @SerializedName("content")
     private String superName;
 
 
