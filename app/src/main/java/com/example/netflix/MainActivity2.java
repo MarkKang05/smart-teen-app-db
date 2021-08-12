@@ -42,6 +42,7 @@ public class MainActivity2 extends AppCompatActivity {
         mRef.child("todos").addValueEventListener(new ValueEventListener() {
             @Override
             public void onDataChange(@NonNull DataSnapshot dataSnapshot) {
+                myArrayList.clear();
                 for (DataSnapshot fileSnapshot : dataSnapshot.getChildren()) {
                     //MyFiles filename = (MyFiles) fileSnapshot.getValue(MyFiles.class);
                     System.out.print("chiid: "+fileSnapshot.child("id").getValue(int.class));
