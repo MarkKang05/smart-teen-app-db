@@ -39,7 +39,8 @@ public class MainActivity extends AppCompatActivity {
 
     EditText et_user_name,et_user_email;
     Button btn_save;
-    Button robotmna;
+    Button list_screen;
+    Button Relist_screen;
 
     private DatabaseReference mDatabase;
 
@@ -73,14 +74,23 @@ public class MainActivity extends AppCompatActivity {
             }
         });
 
-        robotmna = findViewById(R.id.robotmna);
-        robotmna.setOnClickListener(new View.OnClickListener(){
+        list_screen = findViewById(R.id.mv_sc2);
+        list_screen.setOnClickListener(new View.OnClickListener(){
             @Override
             public void onClick(View view) {
-                Intent intent_01 = new Intent(getApplicationContext(), MainActivity2.class);
-                startActivity(intent_01);
+                Intent intent_02 = new Intent(getApplicationContext(), MainActivity2.class);
+                startActivity(intent_02);
 //                Intent intent = new Intent(Intent.ACTION_VIEW, Uri.parse("https://robotmna.com"));
 //                startActivity(intent);
+            }
+        });
+
+        Relist_screen = findViewById(R.id.mv_sc3);
+        Relist_screen.setOnClickListener(new View.OnClickListener(){
+            @Override
+            public void onClick(View view) {
+                Intent intent_03 = new Intent(getApplicationContext(), ReList.class);
+                startActivity(intent_03);
             }
         });
     }

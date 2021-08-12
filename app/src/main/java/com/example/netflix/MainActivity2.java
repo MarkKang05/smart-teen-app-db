@@ -39,15 +39,15 @@ public class MainActivity2 extends AppCompatActivity {
 
         mRef = FirebaseDatabase.getInstance().getReference();
 
-        mRef.child("todos").addValueEventListener(new ValueEventListener() {
+        mRef.child("missions").addValueEventListener(new ValueEventListener() {
             @Override
             public void onDataChange(@NonNull DataSnapshot dataSnapshot) {
                 myArrayList.clear();
                 for (DataSnapshot fileSnapshot : dataSnapshot.getChildren()) {
                     //MyFiles filename = (MyFiles) fileSnapshot.getValue(MyFiles.class);
                     System.out.print("chiid: "+fileSnapshot.child("id").getValue(int.class));
-                    System.out.println("child: "+fileSnapshot.child("content").getValue(String.class)+"========");
-                    String str = fileSnapshot.child("content").getValue(String.class) + " " + fileSnapshot.child("id").getValue(int.class);
+                    System.out.println("child: "+fileSnapshot.child("name").getValue(String.class)+"========");
+                    String str = fileSnapshot.child("id").getValue(int.class) + ": " + fileSnapshot.child("name").getValue(String.class);
                     //System.out.println(" ======== ori"+fileSnapshot);
                     myArrayList.add(str);
                 }

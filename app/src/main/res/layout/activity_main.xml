@@ -43,9 +43,15 @@
         android:layout_height="wrap_content"/>
 
     <Button
-        android:id="@+id/robotmna"
+        android:id="@+id/mv_sc2"
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
-        android:text="robotmna" />
+        android:text="mv-screen listvier" />
 
+
+    <Button
+        android:id="@+id/mv_sc3"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:text="mv-screen RecycleListview" />
 </LinearLayout>
